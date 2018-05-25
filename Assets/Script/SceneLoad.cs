@@ -9,7 +9,7 @@ public class SceneLoad : MonoBehaviour {
 	string scenename;
 	NowScene _nowScene;
 	[SerializeField] string stageName;
-
+	[SerializeField] GameObject _se;
 	void Start () {
 		if (SceneManager.GetActiveScene ().name == "Gameover") {
 			_nowScene = GameObject.Find ("nowScene").GetComponent<NowScene> ();
@@ -31,5 +31,6 @@ public class SceneLoad : MonoBehaviour {
 
 	public void pushStage() {
 		SceneManager.LoadScene (stageName);
+		_se.SetActive (true);
 	}
 }

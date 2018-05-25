@@ -47,6 +47,7 @@ public class Brave : MonoBehaviour {
 				transform.position = new Vector3 (transform.position.x, transform.position.y, 100.0f);
 				spriteRenderer.color = new Color (0, 0, 0, 0.0f);
 				boss.gameObject.SetActive (false);
+				GetComponent<Rigidbody> ().velocity = new Vector3 ();
 			}
 			StartCoroutine (FadeDelay(1.0f, _fade.fadeStart));
 			StartCoroutine (SceneLoad (4.0f, nextStage));
